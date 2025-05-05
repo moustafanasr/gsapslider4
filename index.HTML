@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Gallery</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      .red {
+        max-width: 1500px;
+        height: 150vh;
+        background: red;
+        margin: 0px auto;
+      }
+
+      .gallery {
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-direction: row;
+        margin: 0px auto;
+      }
+
+      .right {
+        max-width: 50%;
+      }
+
+      .left {
+        height: 100vh !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 50%;
+      }
+
+      .cardSlide {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+      }
+
+      .card-container {
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        padding: 20px 30px 20px 0px;
+        background: #ffffff;
+        border-top-right-radius: 14px;
+        left: 0px;
+        bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .card-large-number {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 56px;
+        line-height: 68px;
+        text-transform: capitalize;
+        color: #d50c3d;
+      }
+
+      .right:nth-child(even) .card-large-number {
+        color: #10ab97;
+      }
+
+      .card-title {
+        margin: 5px 0px 20px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22.68px;
+        line-height: 27px;
+        text-transform: capitalize;
+        color: #232826;
+      }
+
+      .card-description {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: capitalize;
+        color: #232826;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 300px;
+      }
+
+      .content-container {
+        width: fit-content;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        justify-content: space-around;
+        align-items: flex-start;
+        position: relative;
+      }
+
+      .content-heading {
+        max-width: 460px;
+        height: fit-content;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: uppercase;
+        color: #232826;
+        position: relative;
+      }
+
+      .number-label {
+        position: absolute;
+        top: 20%;
+        left: 72%;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 128px;
+        line-height: 34px;
+        display: flex;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.06);
+      }
+
+      .content-paragraph {
+        max-width: 440px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        color: #232826;
+        position: relative;
+      }
+
+      .desktopPhotos {
+        height: 544px;
+        width: 630px;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+      }
+      .desktopPhotos img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .desktopPhoto {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .image1 {
+        background-image: url("");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .image2 {
+        background-image: url("");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .image3 {
+        background-image: url("");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .image4 {
+        background-image: url("");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      /* small screen / mobile layout */
+      .mobileContent {
+        display: none;
+        width: 80vw;
+      }
+
+      .mobilePhoto {
+        width: 80vw;
+        height: 80vw;
+        margin-top: 5em;
+        border-radius: 6vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="red"></div>
+
+    <div class="gallery">
+      <div class="left">
+        <!-- desktop content -->
+        <div class="desktopPhotos">
+          <div class="desktopPhoto image1">
+            <div class="card-container">
+              <div class="card-large-number">+2 m</div>
+              <div class="card-title">Donated money</div>
+              <div class="card-description">
+                People Go to Bed Hungry Each Night Lorem ipsum
+              </div>
+            </div>
+          </div>
+          <div class="desktopPhoto image2">
+            <div class="card-container">
+              <div class="card-large-number">+2 m</div>
+              <div class="card-title">Donated money</div>
+              <div class="card-description">
+                People Go to Bed Hungry Each Night Lorem ipsum
+              </div>
+            </div>
+          </div>
+          <div class="desktopPhoto image3">
+            <div class="card-container">
+              <div class="card-large-number">+2 m</div>
+              <div class="card-title">Donated money</div>
+              <div class="card-description">
+                People Go to Bed Hungry Each Night Lorem ipsum
+              </div>
+            </div>
+          </div>
+          <div class="desktopPhoto image4">
+            <div class="card-container">
+              <div class="card-large-number">+2 m</div>
+              <div class="card-title">Donated money</div>
+              <div class="card-description">
+                People Go to Bed Hungry Each Night Lorem ipsum
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="desktopContent">
+          <div backimage="img/IMG1.png" class="cardSlide">
+            <div class="content-container">
+              <div class="number-label">01</div>
+              <div class="content-heading">
+                <h3>Protection program</h3>
+              </div>
+              <div class="content-paragraph">
+                In a journey spanning nearly a decade, the sponsorship and care
+                of orphans has been at the core of ulfah Organization's work. As
+                a result of this commitment, the number of orphans benefiting
+                from sponsorship programs reached 30,203 by the year 2024.
+              </div>
+            </div>
+          </div>
+
+          <div backimage="img/IMG2.png" class="cardSlide">
+            <div class="content-container">
+              <div class="number-label">02</div>
+              <div class="content-heading">
+                <h3>Protection program</h3>
+              </div>
+              <div class="content-paragraph">
+                In a journey spanning nearly a decade, the sponsorship and care
+                of orphans has been at the core of ulfah Organization's work. As
+                a result of this commitment, the number of orphans benefiting
+                from sponsorship programs reached 30,203 by the year 2024.
+              </div>
+            </div>
+          </div>
+
+          <div backimage="img/IMG3.png" class="cardSlide">
+            <div class="content-container">
+              <div class="number-label">03</div>
+              <div class="content-heading">
+                <h3>Protection program</h3>
+              </div>
+              <div class="content-paragraph">
+                In a journey spanning nearly a decade, the sponsorship and care
+                of orphans has been at the core of ulfah Organization's work. As
+                a result of this commitment, the number of orphans benefiting
+                from sponsorship programs reached 30,203 by the year 2024.
+              </div>
+            </div>
+          </div>
+
+          <div backimage="img/IMG1.png" class="cardSlide">
+            <div class="content-container">
+              <div class="number-label">04</div>
+              <div class="content-heading">
+                <h3>Protection program</h3>
+              </div>
+              <div class="content-paragraph">
+                In a journey spanning nearly a decade, the sponsorship and care
+                of orphans has been at the core of ulfah Organization's work. As
+                a result of this commitment, the number of orphans benefiting
+                from sponsorship programs reached 30,203 by the year 2024.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="red"></div>
+
+    <!-- Load GSAP and plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+    <script>
+      // Wait for DOM to be fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Select all cardSlide elements and desktop photos
+        const cardSlides = gsap.utils.toArray(".cardSlide");
+        const photos = gsap.utils.toArray(".desktopPhoto");
+
+        // Set initial background images from backimage attributes
+        cardSlides.forEach((slide, index) => {
+          const backImage = slide.getAttribute("backimage");
+          if (backImage && photos[index]) {
+            photos[index].style.backgroundImage = `url(${backImage})`;
+          }
+        });
+
+        // Initially set all photos except first to be positioned below their container
+        gsap.set(photos.slice(1), { yPercent: 101 });
+
+        // Create a match media instance for responsive behavior
+        let mm = gsap.matchMedia();
+
+        // Desktop behavior (min-width: 600px)
+        mm.add("(min-width: 600px)", () => {
+          // Pin the right column (with photos) while scrolling through content
+          ScrollTrigger.create({
+            trigger: ".gallery",
+            start: "top top",
+            end: "bottom bottom",
+            pin: ".left"
+          });
+
+          // Create scroll triggers for each content section (skip first one)
+          cardSlides.slice(1).forEach((slide, index) => {
+            // Get the h3 element instead of h1 (since your HTML uses h3)
+            let headline = slide.querySelector("h3");
+
+            // Create animation timeline for each photo
+            let animation = gsap
+              .timeline()
+              // Slide current photo up
+              .to(photos[index + 1], { yPercent: 0 })
+              // Hide previous photo
+              // .to(photos[index], { yPercent: -101 }, 0)
+              // Optional: fade effect
+              .fromTo(photos[index + 1], { autoAlpha: 0 }, { autoAlpha: 1 }, 0);
+
+            // Create scroll trigger for each headline
+            ScrollTrigger.create({
+              trigger: headline,
+              start: "top 80%", // When headline reaches 80% from top
+              end: "top 50%", // Until headline reaches 50% from top
+              animation: animation,
+              scrub: true, // Smooth scrubbing effect
+              markers: false // Disable debug markers
+            });
+          });
+
+          // Cleanup function (runs when media query no longer matches)
+          return () => {
+            // Kill all ScrollTriggers created in this context
+            ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+          };
+        });
+
+        // Refresh ScrollTrigger on resize to ensure proper calculations
+        window.addEventListener("resize", () => ScrollTrigger.refresh());
+      });
+    </script>
+
+  </body>
+</html>
